@@ -20,7 +20,7 @@ app.use(express.urlencoded({ extended: false}));
 
 app.use('/task1', require('./routes/task1Route'));
 app.use('/task2', require('./routes/task2Route'));
-// app.get('/task3', require('./routes/task3Route'));
+app.use('/task3', require('./routes/task3Route'));
 app.use('/task4', require('./routes/task4Route'));
 app.get('/*', (req, res) => {
   res.render('index', { title: 'Jeopardize Contest', id: 'Nhom10' });

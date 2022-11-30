@@ -11,6 +11,7 @@ const getItem = (req, res) => {
   res.render('task4-details', { title, zodiacs: [item] });
 };
 
+
 module.exports = {
   getList,
   getItem,
