@@ -16,7 +16,7 @@ app.engine(
 app.set('view engine', 'hbs');
 //Get post data (task2 used)
 app.use(express.json());
-app.use(express.urlencoded({ extended: false}));
+app.use(express.urlencoded({ extended: false }));
 
 app.use('/task1', require('./routes/task1Route'));
 app.use('/task2', require('./routes/task2Route'));
@@ -26,7 +26,7 @@ app.get('/*', (req, res) => {
   res.render('index', { title: 'Jeopardize Contest', id: 'Nhom10' });
 });
 
-app.set('port', process.env.port || 3001);
+app.set('port', process.env.port || 10000);
 app.listen(app.get('port'), () => {
   console.log(`Server is running on port ${app.get('port')}`);
 });
