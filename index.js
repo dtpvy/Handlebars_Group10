@@ -14,9 +14,12 @@ app.engine(
   })
 );
 app.set('view engine', 'hbs');
+//Get post data (task2 used)
+app.use(express.json());
+app.use(express.urlencoded({ extended: false}));
 
 app.use('/task1', require('./routes/task1Route'));
-// app.get('/task2', require('./routes/task2Route'));
+app.use('/task2', require('./routes/task2Route'));
 app.use('/task3', require('./routes/task3Route'));
 app.use('/task4', require('./routes/task4Route'));
 app.get('/*', (req, res) => {
